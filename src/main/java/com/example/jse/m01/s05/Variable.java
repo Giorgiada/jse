@@ -1,29 +1,27 @@
 package com.example.jse.m01.s05;
 
 public class Variable {
-    public static void main(String[] args) {
-        int aPrimitiveVariable = 42;
-        String aReferenceVariable = "42";
 
-        System.out.println(aReferenceVariable);
-        System.out.println(aPrimitiveVariable);
+	public static void main(String[] args) {
+		// camelCase
+		int aVariabilePrimitiva = 88;
+		String aVariabileReference = "parola";
 
-        // Dangerous! Beware of null!
-        String noReference = null;
-        System.out.println(noReference);
+		System.out.println(aVariabilePrimitiva);
+		System.out.println(aVariabileReference);
 
-        // Java 10 inferred type
-        var anotherPrimitiveVariable = 12;
-        var anotherReferenceVariable = "Tom";
+		// il compilatore capisce automaticamente di che tipo di variabile si tratta
+		var variabileAutomatica = 10;
+		var variabileAutomatica2 = "lettera";
 
-        System.out.println(anotherReferenceVariable);
-        System.out.println(anotherPrimitiveVariable);
+		System.out.println(variabileAutomatica);
+		System.out.println(variabileAutomatica2);
 
-        final int A_CONSTANT = 12;
-        final var ANOTHER_CONSTANT = 21;
-        System.out.println(A_CONSTANT + ANOTHER_CONSTANT);
+		// COSTANTE non si pu� modificare. tipo_variabile preceduto da keyword FINAL.
+		// Nome variabile scritto in MAIUSCOLO.
+		final int COSTANTE_1 = 8;
+		final var COSTANTE_AUTOMATICA = 4;
+		System.out.println(COSTANTE_1 - COSTANTE_AUTOMATICA);
+	}
 
-        // a final variable can't change!
-//        A_CONSTANT = 42;
-    }
 }
